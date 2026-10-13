@@ -324,7 +324,7 @@ export default function Home() {
             </div>
             <div className="p-3">
               <div className="text-2xl font-bold text-amber-400">FIAP</div>
-              <div className="text-xs text-slate-400 mt-0.5">Ciência de Dados</div>
+              <div className="text-xs text-slate-400 mt-0.5">Formada em Ciência de Dados</div>
             </div>
           </div>
         </div>
@@ -537,7 +537,7 @@ export default function Home() {
             </h2>
             <div className="mt-6 space-y-4 text-slate-300 text-base leading-relaxed">
               <p>
-                Sou estudante de <strong>Ciência de Dados na FIAP</strong>, com atuação prática em análise exploratória, inferência estatística, engenharia de dados e machine learning aplicado.
+                Sou graduada em <strong>Ciência de Dados pela FIAP</strong>, com sólida atuação prática em análise exploratória, inferência estatística, engenharia de dados e machine learning aplicado.
               </p>
               <p>
                 Acredito que o verdadeiro valor da ciência de dados não está em construir modelos complexos de forma isolada, mas sim em <strong>compreender a mecânica do negócio ou do fenômeno estudado</strong> — seja decifrando relações sociodemográficas em 12 milhões de microdados governamentais ou orquestrando dados multimodais de visão computacional para inteligência de performance física.
@@ -552,7 +552,7 @@ export default function Home() {
             <h3 className="text-lg font-bold text-white mb-4">Educação & Foco</h3>
             <div className="space-y-4">
               <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
-                <div className="text-xs text-sky-400 font-medium">Graduação / Especialização</div>
+                <div className="text-xs text-sky-400 font-medium">Graduação (Concluída)</div>
                 <div className="text-sm font-semibold text-white mt-1">Ciência de Dados</div>
                 <div className="text-xs text-slate-400 mt-0.5">FIAP — Faculdade de Informática e Administração Paulista</div>
               </div>
