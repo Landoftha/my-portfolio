@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Thays Yohana | Data Scientist & Analytics Engineer",
   description: "Portfólio de Ciência de Dados, Engenharia de Dados e Machine Learning por Thays Yohana Costa.",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

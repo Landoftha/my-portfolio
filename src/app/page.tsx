@@ -1,6 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   Mail,
+  Copy,
+  Check,
   ExternalLink,
   Brain,
   Database,
@@ -34,6 +38,14 @@ function GitlabIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 export default function Home() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("thaysyohanacosta71@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
   const featuredProjects = [
     {
       id: "screentime",
@@ -255,10 +267,12 @@ export default function Home() {
               <GitlabIcon className="w-5 h-5 text-orange-400" />
             </a>
             <a
-              href="mailto:thaysyohanacosta71@gmail.com"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/20 transition-all"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=thaysyohanacosta71@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/20 transition-all hover:scale-[1.02]"
             >
-              <Mail className="w-3.5 h-3.5" /> Falar comigo
+              <Mail className="w-3.5 h-3.5" /> Falar comigo (Gmail)
             </a>
           </div>
         </div>
@@ -578,11 +592,29 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:thaysyohanacosta71@gmail.com"
-              className="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all flex items-center gap-2 shadow-lg shadow-sky-500/20"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=thaysyohanacosta71@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all flex items-center gap-2 shadow-lg shadow-sky-500/20 hover:translate-y-[-1px]"
             >
-              <Mail className="w-4 h-4" /> thaysyohanacosta71@gmail.com
+              <Mail className="w-4 h-4" /> Escrever no Gmail
             </a>
+            <button
+              onClick={handleCopyEmail}
+              className="px-5 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-white border border-white/[0.1] text-sm font-medium transition-all flex items-center gap-2 hover:translate-y-[-1px] cursor-pointer"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-4 h-4 text-emerald-400" />
+                  <span className="text-emerald-400 font-semibold">E-mail copiado!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-4 h-4 text-slate-300" />
+                  <span>thaysyohanacosta71@gmail.com</span>
+                </>
+              )}
+            </button>
             <a
               href="https://github.com/Landoftha"
               target="_blank"
