@@ -171,6 +171,12 @@ export default function Home() {
 
   const secondaryProjects = [
     {
+      title: "Egg Outlier Detection (Computer Vision)",
+      desc: "Visão computacional e redes neurais (OpenCV, Isolation Forest e Autoencoder com 97.4% ROC-AUC) para detecção de anomalias em ovos.",
+      tags: ["OpenCV", "Isolation Forest", "Autoencoder"],
+      url: "https://github.com/Landoftha/egg_outlier_detection"
+    },
+    {
       title: "Predicting Medicine for Cancer Treatment",
       desc: "Machine Learning e Bioinformática para resposta terapêutica em tratamentos oncológicos.",
       tags: ["Python", "Jupyter", "Healthcare ML"],
@@ -453,11 +459,11 @@ export default function Home() {
         </div>
 
         {/* Secondary Projects Grid */}
-        <div className="mt-16">
+        <div id="outros-repositorios" className="mt-16 scroll-mt-24">
           <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
             <Code2 className="w-5 h-5 text-sky-400" /> Outros Repositórios e Explorações
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {secondaryProjects.map((p, idx) => (
               <a
                 key={idx}
