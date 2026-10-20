@@ -177,12 +177,6 @@ export default function Home() {
       url: "https://github.com/Landoftha/Predicting-Medicine-for-Cancer-Treatment"
     },
     {
-      title: "TF Flower Classifier (Computer Vision)",
-      desc: "Redes Neurais Convolucionais com TensorFlow para classificação de espécies botânicas.",
-      tags: ["TensorFlow", "Computer Vision", "Deep Learning"],
-      url: "https://github.com/Landoftha/tf-flower-classifier"
-    },
-    {
       title: "Sales & Performance Dashboard",
       desc: "Aplicação analítica para monitoramento de KPIs de vendas e projeções de faturamento.",
       tags: ["Python", "Dashboards", "Data Viz"],
@@ -463,7 +457,7 @@ export default function Home() {
           <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
             <Code2 className="w-5 h-5 text-sky-400" /> Outros Repositórios e Explorações
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {secondaryProjects.map((p, idx) => (
               <a
                 key={idx}
