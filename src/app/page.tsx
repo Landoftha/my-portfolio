@@ -198,24 +198,57 @@ export default function Home() {
 
   const skillCategories = [
     {
-      category: "Ciência de Dados & Machine Learning",
-      icon: <Brain className="w-5 h-5 text-sky-400" />,
-      skills: ["Python", "Pandas", "NumPy", "Scikit-Learn", "XGBoost", "SHAP (XAI)", "Estatística Inferencial", "Modelagem de Painel Econométrico"]
+      category: "Desenvolvimento de Software & Web Full-Stack",
+      icon: <Code2 className="w-5 h-5 text-sky-400" />,
+      skills: [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Tailwind CSS",
+        "Python",
+        "SDD (Spec-Driven Development)"
+      ]
     },
     {
-      category: "Engenharia de Dados & Arquitetura",
+      category: "Cloud, DevOps, Bancos & Metodologias",
       icon: <Database className="w-5 h-5 text-indigo-400" />,
-      skills: ["Modelagem Dimensional (Star Schema)", "Processamento em Chunks (Big Data)", "REST APIs (Google Fit)", "Docker", "Git / GitHub / GitLab"]
+      skills: [
+        "Docker",
+        "AWS",
+        "SQL & NoSQL (PostgreSQL, MongoDB)",
+        "REST APIs",
+        "Git / GitHub / GitLab",
+        "Automação de Processos",
+        "Scrum & Métodos Ágeis"
+      ]
     },
     {
-      category: "Inteligência Artificial Multimodal",
+      category: "IA Generativa, MLOps & Machine Learning",
       icon: <Sparkles className="w-5 h-5 text-purple-400" />,
-      skills: ["Google Gemini Vision (OCR)", "Engenharia de Prompts", "Extração de Dados Não Estruturados", "TensorFlow / CNNs"]
+      skills: [
+        "Fine-Tuning de Modelos",
+        "MLflow",
+        "IA Aplicada no Dia a Dia",
+        "Google Gemini Vision (OCR)",
+        "Machine Learning (XGBoost, Scikit-Learn)",
+        "SHAP (XAI)",
+        "OpenCV / Redes Neurais"
+      ]
     },
     {
-      category: "Visualização & Business Intelligence",
+      category: "Ciência de Dados, Analytics & BI",
       icon: <BarChart3 className="w-5 h-5 text-emerald-400" />,
-      skills: ["Looker Studio", "Matplotlib / Seaborn", "Plotly", "LaTeX (Artigos Científicos)", "KPIs de Negócio & Varejo"]
+      skills: [
+        "Power BI",
+        "Looker Studio",
+        "Modelagem Dimensional (Star Schema)",
+        "Processamento em Chunks (Big Data)",
+        "Pandas / NumPy",
+        "Estatística Inferencial",
+        "LaTeX (Artigos Científicos)"
+      ]
     }
   ];
 
@@ -283,18 +316,18 @@ export default function Home() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6">
             <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-            <span>Disponível para oportunidades em Ciência de Dados</span>
+            <span>Disponível para oportunidades em Desenvolvimento de Software, IA & Dados</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-            Dados que contam histórias.{" "}
+            Software escalável & IA.{" "}
             <span className="bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-              Decisões com impacto real.
+              Soluções com impacto real.
             </span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-slate-300 font-normal leading-relaxed">
-            Olá, sou a <strong className="text-white font-semibold">Thays Yohana Costa</strong>. Sou cientista de dados e analytics engineer, com foco em <strong>pesquisa causal com Big Data</strong>, <strong>IA multimodal (Visão Computacional & LLMs)</strong> e modelagem analítica ponta a ponta.
+            Olá, sou a <strong className="text-white font-semibold">Thays Yohana Costa</strong>. Sou desenvolvedora de software full-stack e cientista de dados, construindo <strong>aplicações web modernas (React, Next.js, TypeScript e Node.js)</strong>, <strong>automações inteligentes com IA/LLMs</strong> e <strong>pipelines analíticos ponta a ponta em Python</strong>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -325,16 +358,16 @@ export default function Home() {
           {/* Quick Metrics Bar */}
           <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] backdrop-blur-sm">
             <div className="p-3">
-              <div className="text-2xl font-bold text-sky-400">12M+</div>
-              <div className="text-xs text-slate-400 mt-0.5">Microdados Analisados</div>
+              <div className="text-2xl font-bold text-sky-400">Full-Stack</div>
+              <div className="text-xs text-slate-400 mt-0.5">React, Next.js, TS & Node</div>
             </div>
             <div className="p-3">
               <div className="text-2xl font-bold text-purple-400">End-to-End</div>
-              <div className="text-xs text-slate-400 mt-0.5">Pipelines de Dados</div>
+              <div className="text-xs text-slate-400 mt-0.5">APIs, Automação & Dados</div>
             </div>
             <div className="p-3">
-              <div className="text-2xl font-bold text-emerald-400">Multimodal</div>
-              <div className="text-xs text-slate-400 mt-0.5">Vision AI & Wearables</div>
+              <div className="text-2xl font-bold text-emerald-400">IA & MLOps</div>
+              <div className="text-xs text-slate-400 mt-0.5">Fine-Tuning, Vision & MLflow</div>
             </div>
             <div className="p-3">
               <div className="text-2xl font-bold text-amber-400">FIAP</div>
@@ -506,7 +539,7 @@ export default function Home() {
             Habilidades & Tecnologias
           </h2>
           <p className="mt-3 text-slate-400 text-sm sm:text-base leading-relaxed">
-            Ferramentas utilizadas no dia a dia para modelagem matemática, arquitetura de pipelines e deploy de modelos.
+            Ferramentas utilizadas para engenharia de software web full-stack, automação de processos, MLOps e modelagem de dados.
           </p>
         </div>
 
@@ -551,13 +584,13 @@ export default function Home() {
             </h2>
             <div className="mt-6 space-y-4 text-slate-300 text-base leading-relaxed">
               <p>
-                Sou graduada em <strong>Ciência de Dados pela FIAP</strong>, com sólida atuação prática em análise exploratória, inferência estatística, engenharia de dados e machine learning aplicado.
+                Sou graduada em <strong>Ciência de Dados pela FIAP</strong> e atuo na convergência entre <strong>Desenvolvimento de Software Full-Stack</strong>, <strong>Inteligência Artificial</strong> e <strong>Engenharia de Dados</strong>.
               </p>
               <p>
-                Acredito que o verdadeiro valor da ciência de dados não está em construir modelos complexos de forma isolada, mas sim em <strong>compreender a mecânica do negócio ou do fenômeno estudado</strong> — seja decifrando relações sociodemográficas em 12 milhões de microdados governamentais ou orquestrando dados multimodais de visão computacional para inteligência de performance física.
+                Desenvolvo interfaces e aplicações web com <strong>React, Next.js, TypeScript, Tailwind CSS e Node.js</strong>, integradas a APIs, bancos de dados <strong>SQL e NoSQL</strong>, containers <strong>Docker</strong> e serviços em nuvem (<strong>AWS</strong>), aplicando práticas ágeis (<strong>Scrum</strong>) e desenvolvimento orientado a especificações (<strong>SDD</strong>).
               </p>
               <p>
-                Estou constantemente explorando a intersecção entre <strong>Modelagem Estatística Clássica</strong> e <strong>IA Generativa/Multimodal (LLMs & Vision AI)</strong>, focando em automação de tarefas cognitivas e produtos de dados escaláveis.
+                Combino essa base de engenharia de software com experiência sólida em <strong>Python, Machine Learning, Fine-Tuning de modelos, MLflow, Power BI e automação de processos com IA</strong> — construindo soluções escaláveis ponta a ponta.
               </p>
             </div>
           </div>
@@ -571,9 +604,9 @@ export default function Home() {
                 <div className="text-xs text-slate-400 mt-0.5">FIAP — Faculdade de Informática e Administração Paulista</div>
               </div>
               <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
-                <div className="text-xs text-purple-400 font-medium">Áreas de Pesquisa & Interesse</div>
-                <div className="text-sm font-semibold text-white mt-1">Econometria Causal & Visão Computacional</div>
-                <div className="text-xs text-slate-400 mt-0.5">Modelos de Painel, Interpretabilidade SHAP, Multimodal AI</div>
+                <div className="text-xs text-purple-400 font-medium">Engenharia de Software & IA</div>
+                <div className="text-sm font-semibold text-white mt-1">Full-Stack Web, Automação & MLOps</div>
+                <div className="text-xs text-slate-400 mt-0.5">React, Next.js, TypeScript, Node.js, Python, Docker, AWS & MLflow</div>
               </div>
             </div>
           </div>
@@ -587,7 +620,7 @@ export default function Home() {
             Vamos conversar?
           </h2>
           <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-            Seja para oportunidades profissionais, projetos em Ciência de Dados ou trocar ideias sobre tecnologia e pesquisa, fique à vontade para me enviar uma mensagem.
+            Seja para oportunidades em Desenvolvimento de Software, IA e Dados, ou para trocar ideias sobre tecnologia e engenharia, fique à vontade para me enviar uma mensagem.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">

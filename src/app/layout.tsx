@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Thays Yohana | Data Scientist & Analytics Engineer",
-  description: "Portfólio de Ciência de Dados, Engenharia de Dados e Machine Learning por Thays Yohana Costa.",
+  title: "Thays Yohana | Software Developer, AI & Data Scientist",
+  description: "Portfólio de Desenvolvimento de Software Web (React, Next.js, TypeScript, Node.js, Python), Inteligência Artificial, MLOps e Ciência de Dados por Thays Yohana Costa.",
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
