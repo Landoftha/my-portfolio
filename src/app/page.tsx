@@ -584,7 +584,7 @@ export default function Home() {
             </h2>
             <div className="mt-6 space-y-4 text-slate-300 text-base leading-relaxed">
               <p>
-                Sou graduada em <strong>Ciência de Dados pela FIAP</strong> e atuo na convergência entre <strong>Desenvolvimento de Software Full-Stack</strong>, <strong>Inteligência Artificial</strong> e <strong>Engenharia de Dados</strong>.
+                Sou graduada em <strong>Ciência de Dados pela FIAP</strong>, <strong>aluna externa de Mestrado em Computação Aplicada na UTFPR</strong> e atuo na convergência entre <strong>Desenvolvimento de Software Full-Stack</strong>, <strong>Inteligência Artificial</strong> e <strong>Engenharia de Dados</strong>.
               </p>
               <p>
                 Desenvolvo interfaces e aplicações web com <strong>React, Next.js, TypeScript, Tailwind CSS e Node.js</strong>, integradas a APIs, bancos de dados <strong>SQL e NoSQL</strong>, containers <strong>Docker</strong> e serviços em nuvem (<strong>AWS</strong>), aplicando práticas ágeis (<strong>Scrum</strong>) e desenvolvimento orientado a especificações (<strong>SDD</strong>).
@@ -598,6 +598,11 @@ export default function Home() {
           <div className="lg:col-span-5 p-6 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.08]">
             <h3 className="text-lg font-bold text-white mb-4">Educação & Foco</h3>
             <div className="space-y-4">
+              <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
+                <div className="text-xs text-emerald-400 font-medium">Mestrado — Aluna Externa (Em andamento)</div>
+                <div className="text-sm font-semibold text-white mt-1">Computação Aplicada</div>
+                <div className="text-xs text-slate-400 mt-0.5">UTFPR — Universidade Tecnológica Federal do Paraná</div>
+              </div>
               <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]">
                 <div className="text-xs text-sky-400 font-medium">Graduação (Concluída)</div>
                 <div className="text-sm font-semibold text-white mt-1">Ciência de Dados</div>
