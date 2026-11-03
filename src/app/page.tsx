@@ -50,10 +50,10 @@ export default function Home() {
     {
       id: "screentime",
       title: "Screentime vs. Education: Impacto no Rendimento Escolar",
-      subtitle: "Big Data, Econometria de Painel e Causal Machine Learning",
+      subtitle: "Big Data, Econometria de Painel e Análise de Associação com Controle Socioeconômico & ML",
       platform: "GitLab",
       platformUrl: "https://gitlab.com/Landoftha/screentime_vs_Education",
-      badge: "Big Data & Causal ML",
+      badge: "Big Data & Interpretable ML",
       badgeColor: "bg-orange-500/10 text-orange-400 border-orange-500/20",
       accentGlow: "from-orange-500/20 to-amber-500/5",
       metrics: [
@@ -62,11 +62,11 @@ export default function Home() {
         { label: "Modelagem", value: "AR-Panel + XGBoost + SHAP" },
       ],
       description:
-        "Estudo empírico em larga escala integrando quatro bases federais para investigar a causalidade entre tempo de exposição a telas e notas de aprendizagem no Brasil. Superação do Paradoxo de Simpson através de modelos dinâmicos de painel e identificação do limiar crítico de 2.5h/dia via interpretabilidade SHAP.",
+        "Estudo empírico em larga escala integrando quatro bases federais para investigar a associação controlada por nível socioeconômico entre tempo de exposição a telas e notas de aprendizagem no Brasil. Identificação e reversão do Paradoxo de Simpson ao controlar pelo INSE (r = 0,875) e detecção do ponto de inflexão em ~2,5h/dia via interpretabilidade SHAP.",
       tags: ["Big Data (12M)", "XGBoost", "SHAP Values", "Regressão de Painel", "Paradoxo de Simpson", "Python", "LaTeX"],
       highlights: [
         "Pipeline em chunks para processamento de 12 milhões de microdados históricos",
-        "Detecção do Paradoxo de Simpson ao controlar pelo estrato socioeconômico (INSE)",
+        "Identificação do Paradoxo de Simpson ao controlar pelo estrato socioeconômico (INSE)",
         "Projeções de cenários para 2025/2027 com modelo autorregressivo de efeitos fixos",
         "Artigo científico completo estruturado e diagramado em LaTeX"
       ],
@@ -172,9 +172,15 @@ export default function Home() {
   const secondaryProjects = [
     {
       title: "Egg Outlier Detection (Computer Vision)",
-      desc: "Visão computacional e redes neurais (OpenCV, Isolation Forest e Autoencoder com 97.4% ROC-AUC) para detecção de anomalias em ovos.",
-      tags: ["OpenCV", "Isolation Forest", "Autoencoder"],
+      desc: "Visão computacional e redes neurais (OpenCV, Isolation Forest, Autoencoder com 97,45% ROC-AUC e MLP com 92,71% de acurácia em 5-fold CV) para detecção de anomalias em ovos.",
+      tags: ["OpenCV", "Isolation Forest", "Autoencoder", "MLP"],
       url: "https://github.com/Landoftha/egg_outlier_detection"
+    },
+    {
+      title: "Evolve Challenge: Churn & MLOps",
+      desc: "Pipeline ETL em Python e SQL Server, engenharia de atributos, rastreamento de experimentos com MLflow, dashboard Streamlit e container Docker.",
+      tags: ["Python", "SQL", "MLflow", "Docker", "Streamlit"],
+      url: "https://github.com/Landoftha/evolve_challenge_data"
     },
     {
       title: "Predicting Medicine for Cancer Treatment",
@@ -183,15 +189,9 @@ export default function Home() {
       url: "https://github.com/Landoftha/Predicting-Medicine-for-Cancer-Treatment"
     },
     {
-      title: "Sales & Performance Dashboard",
-      desc: "Aplicação analítica para monitoramento de KPIs de vendas e projeções de faturamento.",
-      tags: ["Python", "Dashboards", "Data Viz"],
-      url: "https://github.com/Landoftha/SalesDashboard"
-    },
-    {
-      title: "DataViz: Anime Preferences Analytics",
-      desc: "Análise exploratória personalizada com dados de entretenimento e hábitos de consumo.",
-      tags: ["Python", "Pandas", "Visualização"],
+      title: "Yohanalytics: Churn & DataViz App",
+      desc: "Aplicação multipágina em Streamlit para exploração visual de dados e validação de hipóteses de retenção (Telco Churn).",
+      tags: ["Python", "Streamlit", "Pandas", "Seaborn"],
       url: "https://github.com/Landoftha/DataViz"
     }
   ];
