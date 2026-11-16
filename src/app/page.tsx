@@ -312,16 +312,14 @@ export default function Home() {
       ]
     },
     {
-      title: "Back-End & APIs",
+      title: "Back-End, APIs & Engenharia",
       icon: <Code2 className="w-5 h-5 text-[#9E2A2B]" />,
       skills: [
-        "Python",
-        "Node.js",
-        "Java 17",
-        "Spring Boot 3 (JPA, Security)",
+        "Python & Node.js",
+        "Java 17 & Spring Boot 3",
         "APIs RESTful & JSON",
-        "OAuth 2.0 / JWT",
-        "Swagger / OpenAPI",
+        "OAuth 2.0 / JWT & Swagger",
+        "SDD (Spec-Driven Development)",
         "Automação de Processos (ETL)"
       ]
     },
@@ -340,16 +338,16 @@ export default function Home() {
       ]
     },
     {
-      title: "IA Generativa, Dados & Diferenciais",
+      title: "IA Generativa, Multi-Agentes & Dados",
       icon: <Sparkles className="w-5 h-5 text-[#9E2A2B]" />,
       skills: [
+        "Sistemas Multi-Agentes (AI Agents & MCP)",
         "LLMs / Google Gemini API",
+        "Engenharia de Prompt & Orquestração",
         "Visão Computacional (OpenCV, PyTorch)",
         "Machine Learning (XGBoost, Scikit-Learn)",
         "Power BI (DAX) & Looker Studio",
-        "Star Schema (Kimball)",
-        "Conformidade com LGPD",
-        "Scrum & Kanban"
+        "Star Schema (Kimball) & LGPD"
       ]
     }
   ];
@@ -895,7 +893,14 @@ export default function Home() {
                   darkMode ? "text-[#D5C5B3]" : "text-[#3B2F26]"
                 }`}
               >
-                Desenvolvedora Full Stack Júnior graduada em <strong>Ciência de Dados pela FIAP (dez/2025)</strong> e estudante externa do <strong>Programa de Pós-Graduação em Computação Aplicada da UTFPR</strong>. Experiência prática no desenvolvimento de aplicações web modernas ponta a ponta utilizando <strong>React, Next.js, TypeScript, Tailwind CSS, Node.js, Python e Java (Spring Boot)</strong>, além de modelagem e otimização de bancos de dados <strong>PostgreSQL e MongoDB</strong>. Vivência profissional em integração de <strong>APIs REST</strong>, automação de fluxos de dados, containerização com <strong>Docker</strong>, pipelines <strong>CI/CD (GitHub Actions)</strong>, integração de <strong>IA Generativa (Google Gemini API)</strong> e adequação técnica à <strong>LGPD</strong>. Inglês avançado/fluente.
+                Desenvolvedora Full Stack Júnior graduada em <strong>Ciência de Dados pela FIAP (dez/2025)</strong> e estudante externa do <strong>Programa de Pós-Graduação em Computação Aplicada da UTFPR</strong>. Experiência prática no desenvolvimento de aplicações web modernas ponta a ponta utilizando <strong>React, Next.js, TypeScript, Tailwind CSS, Node.js, Python e Java (Spring Boot)</strong>, além de modelagem e otimização de bancos de dados <strong>PostgreSQL e MongoDB</strong>.
+              </p>
+              <p
+                className={`mt-3 text-sm sm:text-base leading-relaxed ${
+                  darkMode ? "text-[#D5C5B3]" : "text-[#3B2F26]"
+                }`}
+              >
+                Atuo com <strong>SDD (Spec-Driven Development / Desenvolvimento Orientado a Especificações)</strong> e arquiteturas de <strong>Sistemas Multi-Agentes (AI Agents, orquestração de LLMs, Google Gemini API e protocolo MCP)</strong>, combinando engenharia de software estruturada, integração de <strong>APIs REST</strong>, containerização com <strong>Docker</strong>, pipelines <strong>CI/CD (GitHub Actions)</strong> e conformidade técnica com a <strong>LGPD</strong>. Inglês avançado/fluente.
               </p>
             </div>
 
@@ -1109,7 +1114,7 @@ export default function Home() {
               darkMode ? "text-[#C8B9A6]" : "text-[#524338]"
             }`}
           >
-            Disponível para oportunidades remotas ou presenciais em Curitiba, PR como Desenvolvedora Full Stack Júnior ou Analista de Dados Júnior.
+            Disponível para oportunidades remotas ou híbridas em Curitiba, PR como Desenvolvedora Full Stack Júnior ou Analista de Dados Júnior.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3.5">
