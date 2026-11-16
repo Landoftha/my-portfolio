@@ -1006,7 +1006,7 @@ export default function Home() {
                     <Globe className="w-3.5 h-3.5" /> Idiomas:
                   </strong>
                   <p className={darkMode ? "text-[#D5C5B3]" : "text-[#3B2F26]"}>
-                    Português (Nativo) • Inglês (Avançado / Fluente) • Espanhol (Intermediário) • Alemão (Básico)
+                    Português (Nativo) • Inglês (Avançado / Fluente) • Espanhol (Intermediário)
                   </p>
                 </div>
               </div>
