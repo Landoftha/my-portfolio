@@ -256,20 +256,20 @@ export default function Home() {
     {
       id: "egg-outlier",
       category: "data" as const,
-      title: "Egg Outlier Detection (Visão Computacional & Redes Neurais)",
-      subtitle: "OpenCV, Isolation Forest, Autoencoder (97,45% ROC-AUC) & MLP (92,71% Acc)",
-      badge: "Computer Vision & AI",
+      title: "Egg Outlier Detection (PyTorch, PatchCore & Visão Computacional)",
+      subtitle: "MobileNetV3 + Spatial PatchCore, OpenCV, SDD (SPECS.md) & Calibração de Custo Industrial",
+      badge: "Computer Vision & Deep Learning",
       platform: "GitHub",
       url: "https://github.com/Landoftha/egg_outlier_detection",
       description:
-        "Pipeline de controle de qualidade industrial combinando visão computacional (OpenCV), estatística clássica (IQR), Isolation Forest e redes neurais, alcançando 97,45% de ROC-AUC na detecção de anomalias com Autoencoder e 92,71% de acurácia com MLP (5-fold CV).",
+        "Sistema de inspeção visual avícola conduzido via SDD (SPECS.md) sobre 732 fotos autorais (divisão estrita por ovo físico, zero vazamento). Evoluiu de Autoencoder tabular (97,45% ROC-AUC) e PoC v1 (99,0% ROC-AUC) para um PatchCore espacial leve (MobileNetV3-Small, 191k parâmetros, ~2 MB) avaliado exclusivamente em trincas reais.",
       highlights: [
-        "Extração de atributos morfológicos e de cor via OpenCV",
-        "Comparativo rigoroso entre IQR, Isolation Forest e Autoencoder (97,45% ROC-AUC)",
-        "Classificação supervisionada com MLPClassifier atingindo 92,71% em validação cruzada",
-        "Visualizações diagnósticas e curva ROC para tomada de decisão industrial"
+        "89,3% ROC-AUC (mediana em 25 splits por ovo físico) em trincas reais e 97,3% ROC-AUC (Recall 10/10) em teste externo",
+        "Auto-normalização espacial intra-ovo para neutralizar falsos positivos da porosidade e pintinhas da casca",
+        "Calibração por custo industrial (prevalência 3%, custo 20:1) reduzindo em -55% o prejuízo esperado",
+        "Inferência de baixa latência em CPU: 22 ms/foto (1 núcleo) com modelo enxuto de ~2 MB"
       ],
-      tags: ["Python", "OpenCV", "Autoencoder", "Isolation Forest", "Scikit-Learn", "Computer Vision"]
+      tags: ["PyTorch", "PatchCore", "MobileNetV3", "OpenCV", "One-Class Learning", "SDD (SPECS.md)"]
     },
     {
       id: "fraude-evolve",
