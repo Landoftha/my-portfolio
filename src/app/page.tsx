@@ -125,6 +125,23 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeFilter, setActiveFilter] = useState<"all" | "fullstack" | "data">("all");
   const [copied, setCopied] = useState(false);
+  const [cursorTooltip, setCursorTooltip] = useState<{ visible: boolean; x: number; y: number }>({
+    visible: false,
+    x: 0,
+    y: 0
+  });
+
+  const handleLinkedInMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    setCursorTooltip({
+      visible: true,
+      x: e.clientX,
+      y: e.clientY
+    });
+  };
+
+  const handleLinkedInMouseLeave = () => {
+    setCursorTooltip((prev) => ({ ...prev, visible: false }));
+  };
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("thaysyohanacosta71@gmail.com");
@@ -360,6 +377,19 @@ export default function Home() {
           : "bg-[#F5EDE0] text-[#231B16] washi-texture"
       }`}
     >
+      {/* Floating Cursor Tooltip for LinkedIn (appears right next to mouse pointer on hover) */}
+      {cursorTooltip.visible && (
+        <div
+          style={{
+            left: `${cursorTooltip.x + 14}px`,
+            top: `${cursorTooltip.y + 18}px`
+          }}
+          className="fixed z-[100] pointer-events-none px-2.5 py-1 bg-[#1e1e1e] text-[#f5f5f5] text-xs font-sans border border-white/40 shadow-lg flex items-center gap-1.5 whitespace-nowrap"
+        >
+          <LinkedinIcon className="w-3.5 h-3.5 text-[#0A66C2]" />
+          <span>LinkedIn</span>
+        </div>
+      )}
       {/* ================= HERO + NAVBAR WRAPPER WITH SUMI-E WATERCOLOR ARTWORK ================= */}
       <div className="relative overflow-hidden border-b border-[#8C735B]/25">
         {/* Background Japanese Watercolor Image (Light Mode) */}
@@ -396,8 +426,16 @@ export default function Home() {
         {/* ================= TOP NAVIGATION BAR (Matches Reference Mockup) ================= */}
         <header className="relative z-30 max-w-6xl mx-auto px-4 sm:px-8 pt-5 pb-4 border-b border-[#6E5641]/25">
           <div className="flex items-center justify-between gap-4">
-            {/* Left Brand: Crimson Seal + Brush Script Name */}
-            <a href="#inicio" className="flex items-center gap-3.5 group">
+            {/* Left Brand: Crimson Seal + Brush Script Name (Links to LinkedIn) */}
+            <a
+              href="https://www.linkedin.com/in/thays-yohana"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+              onMouseMove={handleLinkedInMouseMove}
+              onMouseLeave={handleLinkedInMouseLeave}
+              className="flex items-center gap-3.5 group cursor-pointer"
+            >
               <div className="relative w-12 h-12 rounded-full bg-[#9E2A2B] flex items-center justify-center shadow-md shadow-[#9E2A2B]/30 group-hover:scale-105 transition-transform">
                 <div className="absolute inset-1 rounded-full border border-[#F5EDE0]/70 border-dashed" />
                 <span className="font-mono font-bold text-[#F5EDE0] text-base tracking-tighter">
@@ -406,7 +444,7 @@ export default function Home() {
               </div>
               <div>
                 <div
-                  className={`font-brush text-2xl sm:text-3xl leading-none ${
+                  className={`font-brush text-2xl sm:text-3xl leading-none group-hover:text-[#9E2A2B] transition-colors ${
                     darkMode ? "text-[#F5EDE0]" : "text-[#231B16]"
                   }`}
                 >
@@ -502,9 +540,17 @@ export default function Home() {
                 Olá, eu sou
               </p>
 
-              <div className="relative inline-block">
+              <a
+                href="https://www.linkedin.com/in/thays-yohana"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                onMouseMove={handleLinkedInMouseMove}
+                onMouseLeave={handleLinkedInMouseLeave}
+                className="relative inline-block group cursor-pointer"
+              >
                 <h1
-                  className={`font-brush text-5xl sm:text-6xl xl:text-7xl tracking-wide leading-tight ${
+                  className={`font-brush text-5xl sm:text-6xl xl:text-7xl tracking-wide leading-tight group-hover:text-[#9E2A2B] transition-colors ${
                     darkMode ? "text-[#F5EDE0]" : "text-[#231B16]"
                   }`}
                 >
@@ -513,12 +559,12 @@ export default function Home() {
                 {/* Organic Crimson Brush Underline */}
                 <svg
                   viewBox="0 0 320 16"
-                  className="w-4/5 h-4 text-[#9E2A2B] mx-auto lg:mx-0 mt-0.5 opacity-90"
+                  className="w-4/5 h-4 text-[#9E2A2B] mx-auto lg:mx-0 mt-0.5 opacity-90 group-hover:w-full transition-all duration-300"
                   fill="currentColor"
                 >
                   <path d="M4 10 C85 2, 220 3, 316 9 C240 14, 90 12, 4 10 Z" />
                 </svg>
-              </div>
+              </a>
 
               <h2
                 className={`font-serif-jp italic text-2xl sm:text-3xl font-medium mt-4 ${
@@ -562,9 +608,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column: Enso Ink Brush Circle + Portrait Photo + Sakura Blossoms */}
+            {/* Right Column: Enso Ink Brush Circle + Portrait Photo + Sakura Blossoms (Links to LinkedIn) */}
             <div className="lg:col-span-4 flex justify-center">
-              <div className="group relative w-72 h-72 sm:w-84 sm:h-84 lg:w-92 lg:h-92 flex items-center justify-center cursor-pointer">
+              <a
+                href="https://www.linkedin.com/in/thays-yohana"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                aria-label="Abrir perfil do LinkedIn de Thays Yohana"
+                onMouseMove={handleLinkedInMouseMove}
+                onMouseLeave={handleLinkedInMouseLeave}
+                className="group relative w-72 h-72 sm:w-84 sm:h-84 lg:w-92 lg:h-92 flex items-center justify-center cursor-pointer"
+              >
                 {/* Soft crimson/sakura ambient glow on hover */}
                 <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-[#9E2A2B]/35 via-[#F4A6B0]/25 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
@@ -695,7 +750,7 @@ export default function Home() {
                   <ellipse cx="15" cy="45" rx="6" ry="3.5" transform="rotate(-30 15 45)" fill="#E98A96" />
                   <ellipse cx="135" cy="160" rx="5.5" ry="3" transform="rotate(20 135 160)" fill="#F4A6B0" />
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
 
