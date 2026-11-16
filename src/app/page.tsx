@@ -73,10 +73,7 @@ export default function Home() {
 
       {/* ================= HERO + NAVBAR WRAPPER ================= */}
       <HeroBackdrop>
-        <Navbar
-          onLinkedInHoverMove={onMouseMove}
-          onLinkedInHoverLeave={onMouseLeave}
-        />
+        <Navbar />
 
         {/* ================= HERO MAIN CONTENT ================= */}
         <section

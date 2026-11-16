@@ -3,26 +3,15 @@
 import React from "react";
 import { Home as HomeIcon, Monitor, User, Mail } from "lucide-react";
 import { ThemeToggle } from "./ThemeProvider";
-import { PROFILE_LINKS } from "../data/portfolioData";
 
-interface NavbarProps {
-  onLinkedInHoverMove: (e: React.MouseEvent<HTMLElement>) => void;
-  onLinkedInHoverLeave: () => void;
-}
-
-export function Navbar({ onLinkedInHoverMove, onLinkedInHoverLeave }: NavbarProps) {
+export function Navbar() {
   return (
     <header className="relative z-30 max-w-6xl mx-auto px-4 sm:px-8 pt-5 pb-4 border-b theme-border">
       <div className="flex items-center justify-between gap-4">
-        {/* Left Brand: Crimson Seal + Brush Script Name */}
+        {/* Left Brand: Crimson Seal + Brush Script Name (Scrolls to top) */}
         <a
-          href={PROFILE_LINKS.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          title="LinkedIn"
-          onMouseMove={onLinkedInHoverMove}
-          onMouseLeave={onLinkedInHoverLeave}
-          className="flex items-center gap-3.5 group cursor-pointer"
+          href="#inicio"
+          className="flex items-center gap-3.5 group"
         >
           <div className="relative w-12 h-12 rounded-full bg-[#9E2A2B] flex items-center justify-center shadow-md shadow-[#9E2A2B]/30 group-hover:scale-105 transition-transform">
             <div className="absolute inset-1 rounded-full border border-[#F5EDE0]/70 border-dashed" />
