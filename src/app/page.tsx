@@ -152,7 +152,7 @@ export default function Home() {
       subtitle: "Next.js 16, React 19, TypeScript & Tailwind CSS 4",
       badge: "Full Stack / Front-End",
       platform: "GitHub",
-      url: "https://github.com/Landoftha",
+      url: "https://github.com/Landoftha/calculadora-financiamento",
       description:
         "Aplicação web interativa (SPA/SSR) para simulação financeira comparativa entre modalidades SAC, MCMV e SBPE, cálculo de amortização extraordinária e comprometimento de renda em tempo real, com deploy contínuo na Vercel.",
       highlights: [
@@ -364,10 +364,10 @@ export default function Home() {
     >
       {/* ================= HERO + NAVBAR WRAPPER WITH SUMI-E WATERCOLOR ARTWORK ================= */}
       <div className="relative overflow-hidden border-b border-[#8C735B]/25">
-        {/* Background Japanese Watercolor Image */}
+        {/* Background Japanese Watercolor Image (Light Mode) */}
         <div
-          className={`absolute inset-0 bg-cover bg-no-repeat pointer-events-none transition-opacity duration-500 ${
-            darkMode ? "opacity-20 invert hue-rotate-180" : "opacity-95"
+          className={`absolute inset-0 bg-cover bg-no-repeat pointer-events-none transition-opacity duration-700 ${
+            darkMode ? "opacity-0" : "opacity-95"
           }`}
           style={{
             backgroundImage: "url('/hero-sumi-bg.jpg')",
@@ -375,12 +375,23 @@ export default function Home() {
           }}
         />
 
-        {/* Soft gradient overlay so text is always crisp and readable */}
+        {/* Background Japanese Watercolor Image (Dark Mode Nocturnal Scene) */}
         <div
-          className={`absolute inset-0 pointer-events-none ${
+          className={`absolute inset-0 bg-cover bg-no-repeat pointer-events-none transition-opacity duration-700 ${
+            darkMode ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: "url('/hero-sumi-dark-bg.jpg')",
+            backgroundPosition: "-45px center"
+          }}
+        />
+
+        {/* Soft gradient overlay so text is always crisp without hiding the artwork */}
+        <div
+          className={`absolute inset-0 pointer-events-none transition-colors duration-700 ${
             darkMode
-              ? "bg-gradient-to-r from-[#161311]/85 via-[#161311]/75 to-[#161311]/85"
-              : "bg-gradient-to-r from-[#F5EDE0]/20 via-[#F5EDE0]/55 to-[#F5EDE0]/35"
+              ? "bg-gradient-to-r from-transparent via-[#161311]/30 to-transparent"
+              : "bg-gradient-to-r from-[#F5EDE0]/10 via-[#F5EDE0]/45 to-[#F5EDE0]/25"
           }`}
         />
 
@@ -555,11 +566,14 @@ export default function Home() {
 
             {/* Right Column: Enso Ink Brush Circle + Portrait Photo + Sakura Blossoms */}
             <div className="lg:col-span-4 flex justify-center">
-              <div className="relative w-72 h-72 sm:w-84 sm:h-84 lg:w-92 lg:h-92 flex items-center justify-center">
+              <div className="group relative w-72 h-72 sm:w-84 sm:h-84 lg:w-92 lg:h-92 flex items-center justify-center cursor-pointer">
+                {/* Soft crimson/sakura ambient glow on hover */}
+                <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-[#9E2A2B]/35 via-[#F4A6B0]/25 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
                 {/* Outer Sumi-e Enso Brush Ring SVG */}
                 <svg
                   viewBox="0 0 400 400"
-                  className={`absolute inset-0 w-full h-full pointer-events-none ${
+                  className={`absolute inset-0 w-full h-full pointer-events-none transition-transform duration-700 ease-out group-hover:rotate-6 group-hover:scale-[1.03] ${
                     darkMode ? "text-[#E6D7C3]" : "text-[#2B241F]"
                   }`}
                 >
@@ -601,22 +615,41 @@ export default function Home() {
                   />
                 </svg>
 
-                {/* Portrait Image Inside the Enso Circle */}
-                <div className="relative w-[81%] h-[81%] rounded-full overflow-hidden shadow-2xl border-4 border-[#E5D5C0]/80 bg-[#DFCGB5]">
+                {/* Portrait Image Inside the Enso Circle with Smooth Fade on Hover */}
+                <div
+                  className={`relative w-[81%] h-[81%] rounded-full overflow-hidden shadow-2xl border-4 transition-all duration-700 group-hover:border-[#9E2A2B]/80 ${
+                    darkMode
+                      ? "border-[#8C735B]/50 bg-[#1A1512]"
+                      : "border-[#E5D5C0]/80 bg-[#2B231D]"
+                  }`}
+                >
                   <img
                     src="/foto/thays-yohana.jpg"
                     alt="Thays Yohana Costa - Desenvolvedora Full Stack"
-                    className="w-full h-full object-cover object-[center_18%] scale-110 contrast-[1.05] brightness-[0.98] sepia-[0.14]"
+                    className={`w-full h-full object-cover object-[center_18%] scale-110 contrast-[1.05] transition-all duration-700 ease-in-out group-hover:scale-[1.18] group-hover:opacity-70 group-hover:sepia-0 group-hover:brightness-105 ${
+                      darkMode
+                        ? "brightness-[0.9] sepia-[0.18]"
+                        : "brightness-[0.98] sepia-[0.14]"
+                    }`}
                   />
-                  {/* Warm washi paper tint & inner vignette so studio backdrop harmonizes with parchment */}
-                  <div className="absolute inset-0 bg-[#E8D6BE]/25 mix-blend-multiply pointer-events-none" />
-                  <div className="absolute inset-0 rounded-full shadow-[inset_0_0_36px_rgba(43,35,29,0.35)] pointer-events-none" />
+                  {/* Warm washi paper tint */}
+                  <div className="absolute inset-0 bg-[#E8D6BE]/25 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0 pointer-events-none" />
+                  {/* Smooth radial edge fade (fading into the Enso circle border) */}
+                  <div
+                    className={`absolute inset-0 rounded-full pointer-events-none transition-all duration-700 ${
+                      darkMode
+                        ? "shadow-[inset_0_0_52px_18px_rgba(22,19,17,0.82)] group-hover:shadow-[inset_0_0_65px_24px_rgba(158,42,43,0.45)]"
+                        : "shadow-[inset_0_0_42px_12px_rgba(58,45,35,0.38)] group-hover:shadow-[inset_0_0_60px_20px_rgba(158,42,43,0.38)]"
+                    }`}
+                  />
+                  {/* Smooth atmospheric fade overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#9E2A2B]/40 via-[#231B16]/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                 </div>
 
                 {/* Decorative Sakura Blossoms Overlapping Bottom-Left of Enso Frame */}
                 <svg
                   viewBox="0 0 180 180"
-                  className="absolute -bottom-3 -left-3 w-36 h-36 sm:w-44 sm:h-44 pointer-events-none drop-shadow-sm"
+                  className="absolute -bottom-3 -left-3 w-36 h-36 sm:w-44 sm:h-44 pointer-events-none drop-shadow-sm transition-transform duration-700 ease-out group-hover:-translate-y-1.5 group-hover:scale-105"
                 >
                   {/* Branch */}
                   <path
@@ -754,12 +787,16 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
-            <article
+            <a
               key={project.id}
-              className={`rounded-2xl p-6 sm:p-7 border transition-all flex flex-col justify-between shadow-sm hover:shadow-md ${
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Abrir repositório do projeto ${project.title} no ${project.platform}`}
+              className={`group rounded-2xl p-6 sm:p-7 border transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 cursor-pointer ${
                 darkMode
-                  ? "bg-[#201B18] border-[#8C735B]/25 hover:border-[#9E2A2B]/60"
-                  : "bg-[#FAF5EC]/90 border-[#8C735B]/35 hover:border-[#9E2A2B]/60"
+                  ? "bg-[#201B18] border-[#8C735B]/25 hover:border-[#9E2A2B]/80"
+                  : "bg-[#FAF5EC]/90 border-[#8C735B]/35 hover:border-[#9E2A2B]/80"
               }`}
             >
               <div>
@@ -768,20 +805,23 @@ export default function Home() {
                     {project.badge}
                   </span>
                   <span
-                    className={`text-xs flex items-center gap-1.5 font-medium ${
-                      darkMode ? "text-[#C8B9A6]" : "text-[#5C4B3E]"
+                    className={`px-2.5 py-1 rounded-full text-xs flex items-center gap-1.5 font-semibold border transition-all group-hover:bg-[#9E2A2B] group-hover:text-[#F5EDE0] group-hover:border-[#9E2A2B] ${
+                      darkMode
+                        ? "bg-[#2C2520] text-[#E6D7C3] border-[#8C735B]/30"
+                        : "bg-[#EFE4D2] text-[#4A3B31] border-[#8C735B]/30"
                     }`}
                   >
                     {project.platform === "GitLab" ? (
-                      <GitlabIcon className="w-3.5 h-3.5 text-[#9E2A2B]" />
+                      <GitlabIcon className="w-3.5 h-3.5" />
                     ) : (
                       <GithubIcon className="w-3.5 h-3.5" />
                     )}
-                    {project.platform}
+                    <span>{project.platform}</span>
+                    <ExternalLink className="w-3 h-3 opacity-75 group-hover:opacity-100" />
                   </span>
                 </div>
 
-                <h3 className="font-serif-jp text-xl sm:text-2xl font-bold leading-snug">
+                <h3 className="font-serif-jp text-xl sm:text-2xl font-bold leading-snug group-hover:text-[#9E2A2B] transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-xs sm:text-sm font-semibold text-[#9E2A2B] mt-1">
@@ -824,17 +864,12 @@ export default function Home() {
                   ))}
                 </div>
 
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-serif-jp font-bold text-[#9E2A2B] hover:underline shrink-0"
-                >
+                <span className="inline-flex items-center gap-1.5 text-xs font-serif-jp font-bold text-[#9E2A2B] group-hover:translate-x-0.5 transition-transform shrink-0">
                   <span>Ver Repositório</span>
                   <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                </span>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </section>
