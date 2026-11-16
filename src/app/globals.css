@@ -1,8 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f5ede0;
-  --foreground: #1f1a17;
+:root,
+[data-theme="light"] {
+  --bg-page: #f5ede0;
+  --bg-card: rgba(250, 245, 236, 0.9);
+  --bg-pill: #efe4d2;
+  --bg-toggle: rgba(229, 215, 196, 0.9);
+  --bg-toggle-knob: #fbf7f0;
+  --text-primary: #231b16;
+  --text-secondary: #3b2f26;
+  --text-muted: #5c4b3e;
+  --border-subtle: rgba(140, 115, 91, 0.35);
+  --border-divider: rgba(140, 115, 91, 0.25);
+  --accent-crimson: #9e2a2b;
+  --accent-crimson-hover: #822021;
+  --accent-cream: #f5ede0;
+  --enso-stroke: #2b241f;
+  --portrait-border: rgba(229, 213, 192, 0.8);
+  --portrait-bg: #2b231d;
+}
+
+[data-theme="dark"] {
+  --bg-page: #161311;
+  --bg-card: #201b18;
+  --bg-pill: #2c2520;
+  --bg-toggle: #2c241e;
+  --bg-toggle-knob: #9e2a2b;
+  --text-primary: #f5ede0;
+  --text-secondary: #d5c5b3;
+  --text-muted: #c8b9a6;
+  --border-subtle: rgba(140, 115, 91, 0.28);
+  --border-divider: rgba(140, 115, 91, 0.22);
+  --accent-crimson: #9e2a2b;
+  --accent-crimson-hover: #822021;
+  --accent-cream: #f5ede0;
+  --enso-stroke: #e6d7c3;
+  --portrait-border: rgba(140, 115, 91, 0.5);
+  --portrait-bg: #1a1512;
 }
 
 html {
@@ -10,8 +44,8 @@ html {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -23,12 +57,46 @@ body {
   font-family: var(--font-serif-jp), Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-/* Subtle paper grain overlay */
-.washi-texture {
+/* Subtle paper grain overlay in light mode */
+[data-theme="light"] .washi-surface {
   background-image: radial-gradient(rgba(139, 94, 60, 0.06) 1px, transparent 0),
     radial-gradient(rgba(45, 35, 30, 0.04) 1px, transparent 0);
   background-size: 28px 28px;
   background-position: 0 0, 14px 14px;
+}
+
+/* Reusable semantic theme classes */
+.theme-page {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.theme-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.theme-pill {
+  background-color: var(--bg-pill);
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.theme-text-primary {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-border {
+  border-color: var(--border-divider);
 }
 
 /* Custom brush button shape */
