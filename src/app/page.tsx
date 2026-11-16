@@ -401,7 +401,7 @@ export default function Home() {
                     darkMode ? "text-[#F5EDE0]" : "text-[#231B16]"
                   }`}
                 >
-                  Yohana Costa
+                  Thays Yohana
                 </div>
                 <div
                   className={`text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase mt-1 ${
@@ -499,7 +499,7 @@ export default function Home() {
                     darkMode ? "text-[#F5EDE0]" : "text-[#231B16]"
                   }`}
                 >
-                  Yohana Costa
+                  Thays Yohana
                 </h1>
                 {/* Organic Crimson Brush Underline */}
                 <svg
