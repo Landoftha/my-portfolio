@@ -77,7 +77,7 @@ export function EnsoPortrait({ onLinkedInHoverMove, onLinkedInHoverLeave }: Enso
         className="relative w-[81%] h-[81%] rounded-full overflow-hidden shadow-2xl border-4 transition-all duration-700 group-hover:border-[#9E2A2B]/80"
       >
         <img
-          src="/foto/thays-yohana.jpg"
+          src="/foto/thays-yohana.webp"
           alt="Thays Yohana Costa - Desenvolvedora Full Stack"
           className={`w-full h-full object-cover object-[center_18%] scale-110 contrast-[1.05] transition-all duration-700 ease-in-out group-hover:scale-[1.18] group-hover:opacity-70 group-hover:sepia-0 group-hover:brightness-105 ${
             darkMode ? "brightness-[0.9] sepia-[0.18]" : "brightness-[0.98] sepia-[0.14]"
