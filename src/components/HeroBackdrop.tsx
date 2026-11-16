@@ -7,26 +7,24 @@ export function HeroBackdrop({ children }: { children: React.ReactNode }) {
   const { darkMode } = useTheme();
 
   return (
-    <div className="relative overflow-hidden border-b theme-border">
+    <div className="relative w-full overflow-hidden border-b theme-border">
       {/* Background Japanese Watercolor Image (Light Mode) */}
       <div
-        className={`absolute inset-0 bg-cover bg-no-repeat pointer-events-none transition-opacity duration-700 ${
+        className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat pointer-events-none transition-opacity duration-700 ${
           darkMode ? "opacity-0" : "opacity-95"
         }`}
         style={{
-          backgroundImage: "url('/hero-sumi-bg.jpg')",
-          backgroundPosition: "-45px center"
+          backgroundImage: "url('/hero-sumi-bg.jpg')"
         }}
       />
 
       {/* Background Japanese Watercolor Image (Dark Mode Nocturnal Scene) */}
       <div
-        className={`absolute inset-0 bg-cover bg-no-repeat pointer-events-none transition-opacity duration-700 ${
+        className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat pointer-events-none transition-opacity duration-700 ${
           darkMode ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          backgroundImage: "url('/hero-sumi-dark-bg.jpg')",
-          backgroundPosition: "-45px center"
+          backgroundImage: "url('/hero-sumi-dark-bg.jpg')"
         }}
       />
 
